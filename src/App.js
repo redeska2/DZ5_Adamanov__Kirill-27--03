@@ -1,6 +1,10 @@
 
+
+
 import React, { useState, useEffect } from 'react';
 import './index.css'; 
+
+
 
 const initialData = {
   key1: 'Barbara',
@@ -15,8 +19,7 @@ const App = () => {
 
   useEffect(() => {
     const combinedText = Object.keys(data)
-      .filter((key) => key !== 'key1')
-      .map((key) => data[key])
+      .map((key) => `${data[key]}`)
       .join(', ');
 
     setOutputText(combinedText);
@@ -47,11 +50,6 @@ const App = () => {
 };
 
 export default App;
-
-
-
-
-
 
 
 
